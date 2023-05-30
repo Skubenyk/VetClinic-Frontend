@@ -1,0 +1,140 @@
+//*Application
+
+@import './../../styles/normolize.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+@import './../../styles/fonts.scss';
+
+//*Application section
+.application {
+  background-color: $c-orange;
+  color: $c-white;
+  // Media
+  @media screen and (max-width: 1024px) {
+    font-size: 8px;
+  }
+}
+.wrapper {
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+}
+
+//*Text apps block
+.textApps {
+  margin-bottom: 50px;
+  margin-right: 5px;
+  flex-flow: column;
+  margin-left: 5px;
+  margin-top: 50px;
+  display: flex;
+  padding: 5px;
+  width: 410px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 220px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+.title {
+  margin-bottom: 20px;
+  line-height: 40px;
+  font-size: 30px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 10px;
+    line-height: 28px;
+    font-size: 26px;
+  }
+  @media screen and (max-width: 768px) {
+    line-height: 22px;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    line-height: 14px;
+    font-size: 14px;
+  }
+}
+.appStore,
+.googlePlay {
+  width: 110px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    width: 90px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 75px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 65px;
+  }
+}
+.appStore {
+  margin-right: 20px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-right: 5px;
+  }
+}
+// Hover effect
+.appStore:hover {
+  transform: scale(1.03);
+}
+.googlePlay:hover {
+  transform: scale(1.03);
+}
+
+//*Image block
+.image {
+  margin-bottom: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 50px;
+  display: flex;
+  padding: 5px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+.imageBigl {
+  width: 200px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    width: 180px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.imageMobileApp {
+  width: 110px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    width: 100px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 80px;
+  }
+}

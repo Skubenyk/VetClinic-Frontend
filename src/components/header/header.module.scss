@@ -1,0 +1,240 @@
+// * Header
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+// * Header section
+.header {
+  background-color: $c-white;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: 0;
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: $c-brown-light;
+  }
+}
+.headerWrapper {
+  justify-content: space-between;
+  padding: 25px 20px;
+  display: flex;
+}
+
+//*Logo
+.headerLogo {
+  height: fit-content;
+  margin-left: 15px;
+  // Media
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+.logoImage {
+  max-width: 50px;
+  width: 100%;
+  // Media
+  @media screen and (max-width: 768px) {
+    max-width: 35px;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 30px;
+  }
+}
+.headerBlock {
+  justify-content: space-between;
+  display: flex;
+}
+.headerNavigation {
+  margin: auto 0;
+  // Media
+  @media screen and (max-width: 1024px) {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+.headerNavigation.show {
+  pointer-events: all;
+  opacity: 1;
+}
+
+//*Navigation
+.navigation {
+  background-color: $c-white;
+  padding: 5px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+}
+.navigationList {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 450px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+.navigationItem {
+  margin-right: 20px;
+  line-height: 10px;
+  font-weight: 600;
+  padding: 5px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin: 5px auto;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: $fs-base;
+    margin: 3px auto;
+  }
+}
+.navigationItem:last-child {
+  margin-right: 0;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin: 5px auto;
+  }
+}
+.navigationLink:hover {
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  color: $c-brown;
+}
+
+//*Buttons
+.headerOther {
+  justify-content: space-between;
+  margin-left: 30px;
+  max-width: 200px;
+  display: flex;
+  width: 100%;
+  // Media
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+.button {
+  background-color: $c-orange;
+  white-space: nowrap;
+  border-radius: 4px;
+  margin: auto 10px;
+  font-weight: 900;
+  color: $c-white;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0 8px;
+  height: 30px;
+  border: none;
+  // Media
+  @media screen and (max-width: 768px) {
+    font-size: $fs-base;
+    margin: auto 5px;
+    padding: 0 5px;
+    height: 25px;
+  }
+  @media screen and (max-width: 480px) {
+    margin: auto 5px;
+    font-size: 8px;
+    padding: 0 4px;
+    height: 20px;
+  }
+}
+.button:hover {
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: $c-brown;
+  color: $c-white;
+}
+.buttonTransparent {
+  border: 1px solid $c-brown;
+  background-color: $c-white;
+  color: $c-brown;
+}
+.button:last-child {
+  margin-right: 0;
+}
+
+//*Burger
+.headerBurger {
+  display: none;
+  // Media
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+.burger {
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  border: none;
+  z-index: 200;
+  // Media
+  @media screen and (max-width: 1024px) {
+    padding: 5px;
+  }
+  span {
+    transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: $c-black;
+    display: inline-block;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    width: 30px;
+    height: 3px;
+    // Media
+    @media screen and (max-width: 768px) {
+      margin-bottom: 4px;
+      width: 25px;
+    }
+    @media screen and (max-width: 480px) {
+      margin-bottom: 3px;
+      width: 20px;
+      height: 2px;
+    }
+    &:last-child {
+      transition: 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-bottom: 0;
+    }
+    &:first-child {
+      margin-top: 6px;
+      // Media
+      @media screen and (max-width: 768px) {
+        margin-top: 2px;
+      }
+      @media screen and (max-width: 480px) {
+        margin-top: 3px;
+      }
+    }
+  }
+}
+// Show burger
+.burger.show {
+  span {
+    transform: rotate(-45deg) translateY(-5px);
+    &:first-child {
+      transform: rotate(45deg) translateY(5px);
+    }
+    &:last-child {
+      opacity: 0;
+    }
+  }
+}

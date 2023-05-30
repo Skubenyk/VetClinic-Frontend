@@ -1,0 +1,203 @@
+//*Footer
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*Footer section
+.footer {
+  background-color: $c-brown;
+  color: $c-white;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  // Media
+  @media screen and (max-width: 1024px) {
+    font-size: 8px;
+  }
+  a {
+    color: $c-white;
+  }
+}
+.wrapper {
+  justify-content: space-around;
+  display: flex;
+  padding: 10px;
+  // Media
+  @media screen and (max-width: 480px) {
+    padding: 5px;
+  }
+}
+
+//*Logo block
+.logo {
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+  padding: 5px;
+  // Media
+  @media screen and (max-width: 480px) {
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 0;
+  }
+}
+.logoImageContainer {
+  background-color: $c-white;
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 50px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-right: 5px;
+    height: 35px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-right: 0;
+    height: 25px;
+  }
+}
+.logoImage {
+  height: 40px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    height: 30px;
+  }
+  @media screen and (max-width: 480px) {
+    height: 20px;
+  }
+}
+.logoText {
+  margin-right: 5px;
+  margin-left: 5px;
+  max-width: 185px;
+  width: 100%;
+}
+.logoTitle {
+  line-height: 30px;
+  font-size: 30px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    line-height: 25px;
+    font-size: 26px;
+  }
+  @media screen and (max-width: 480px) {
+    line-height: 20px;
+    font-size: 18px;
+  }
+}
+.logoSubtitle {
+  margin-bottom: 10px;
+  // Media
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+.logoTextPolitics {
+  // Media
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+//*Link block
+.link {
+  justify-content: space-around;
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+  padding: 5px;
+  width: 500px;
+  // Media
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 0;
+  }
+}
+.linkColumn1 {
+  margin-right: 5px;
+}
+.linkColumn {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+//*Apps block
+.apps {
+  margin-right: 5px;
+  flex-flow: column;
+  margin-left: 5px;
+  display: flex;
+  padding: 5px;
+  // Media
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
+}
+.appsMobile {
+  justify-content: space-around;
+  margin-bottom: 30px;
+  display: flex;
+  // Media
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+.appStore,
+.googlePlay {
+  width: 100px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    width: 80px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 60px;
+  }
+}
+.appStore {
+  margin-right: 20px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-right: 5px;
+  }
+}
+// Hover effect
+.appStore:hover {
+  transform: scale(1.04);
+}
+.googlePlay:hover {
+  transform: scale(1.04);
+}
+.appsIcon {
+  justify-content: space-around;
+  margin-bottom: 15px;
+  display: flex;
+  // Media
+  @media screen and (max-width: 768px) {
+    margin-bottom: 5px;
+  }
+}
+.icon {
+  font-size: 24px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+}
+// Hover effect
+.icon:hover {
+  transform: scale(1.15);
+  transition: 1.2s;
+  color: $c-orange;
+}

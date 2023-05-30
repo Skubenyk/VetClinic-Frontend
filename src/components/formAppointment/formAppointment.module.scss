@@ -1,0 +1,170 @@
+//*FormAppointment
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*Form appointment
+
+// Not visible modal window
+.modal {
+  background-color: rgba(204, 204, 190, 0.5);
+  pointer-events: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+// Visible modal window
+.modal.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+//*Form
+.form {
+  box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+  transform: translate(-50%, -50%);
+  background-color: $c-orange;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  width: fit-content;
+  display: flex;
+  left: 50%;
+  top: 50%;
+
+  input,
+  textarea {
+    box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+    border: 2px solid $c-white;
+    border-radius: 10px;
+    padding: 7px;
+    // Media
+    @media screen and (max-width: 1024px) {
+      border-radius: 8px;
+      padding: 6px;
+    }
+    @media screen and (max-width: 768px) {
+      border-radius: 6px;
+      padding: 5px;
+    }
+  }
+}
+.tel,
+.formContentText {
+  margin-top: 12px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-top: 10px;
+  }
+}
+.formWrapper {
+  height: fit-content;
+  width: 380px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    width: 360px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 260px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 220px;
+  }
+}
+
+//*Title
+.titleForm {
+  margin-bottom: 30px;
+  line-height: 10px;
+  font-size: 30px;
+  color: $c-brown;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 20px;
+    line-height: 10px;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 15px;
+  }
+}
+.conntainerForm {
+  flex-direction: column;
+  display: flex;
+  padding: 20px;
+  // Media
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 13px;
+  }
+}
+.formContent {
+  flex-direction: column;
+  display: flex;
+}
+.formContentText {
+  overflow: auto;
+  // Media
+  @media screen and (max-width: 768px) {
+    height: 70px;
+  }
+}
+.formButton {
+  flex-direction: column;
+  display: flex;
+}
+.buttonSubmit,
+.buttonClose {
+  transform: translate(-50%, 0);
+  border-radius: 4px;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  color: $c-white;
+  padding: 0 7px;
+  border: none;
+  height: 26px;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    padding: 6px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 5px;
+    height: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 4px;
+    height: 17px;
+  }
+}
+.buttonSubmit {
+  background-color: $c-brown-light;
+  font-weight: 700;
+  margin-top: 12px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-top: 10px;
+  }
+}
+.buttonClose {
+  background-color: $c-orange;
+  color: $c-black;
+  font-size: 8px;
+}
+.error {
+  color: $c-red;
+  margin-left: 10px;
+}

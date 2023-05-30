@@ -1,0 +1,23 @@
+//* Leaflet Map styles
+
+//*Leaflet container
+.leaflet-container {
+  margin-right: 15px;
+  margin-left: 15px;
+  max-width: 450px;
+  height: 300px;
+  width: 100%;
+  z-index: 2;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-right: 10px;
+    margin-left: 10px;
+    max-width: 340px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-right: 5px;
+    margin-left: 5px;
+    max-width: 217px;
+    height: 200px;
+  }
+}

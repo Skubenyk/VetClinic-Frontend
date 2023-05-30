@@ -1,0 +1,108 @@
+//*Specialists
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+.specialistsWrapper {
+  box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+  max-width: 500px;
+  width: 100%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 480px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    max-width: 360px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 15px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 8px;
+    max-width: 260px;
+  }
+}
+.specialistsWrapper:last-child {
+  margin-bottom: 0;
+}
+.imageName {
+  margin-bottom: 15px;
+  display: flex;
+  padding: 10px;
+  // Media
+  @media screen and (max-width: 768px) {
+    margin-bottom: 8px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 3px;
+  }
+}
+.image {
+  margin-right: 20px;
+  // Media
+  @media screen and (max-width: 768px) {
+    max-width: 90px;
+    width: 100%;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 70px;
+    height: 70px;
+  }
+}
+.nameSpecialization {
+  flex-direction: column;
+  align-self: flex-end;
+  display: flex;
+}
+.titleName {
+  margin-bottom: 5px;
+  line-height: 20px;
+  font-size: 16px;
+  // Media
+  @media screen and (max-width: 480px) {
+    margin-bottom: 3px;
+    line-height: 16px;
+    font-size: 14px;
+  }
+}
+.specialization {
+  color: $c-orange;
+  font-size: 12px;
+  // Media
+  @media screen and (max-width: 480px) {
+    font-size: $fs-base;
+  }
+}
+.description {
+  margin-bottom: 15px;
+  display: none;
+}
+.description.activeText {
+  display: block;
+}
+.button {
+  transform: translate(-50%, 0);
+  background-color: $c-orange;
+  position: relative;
+  border-radius: 2px;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  left: 50%;
+}
+.button.active {
+  background-color: $c-brown;
+  color: $c-white;
+}

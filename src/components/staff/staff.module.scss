@@ -1,0 +1,119 @@
+//*Staff
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*Staff section
+.staff {
+  background-color: $c-white;
+  color: $c-black;
+}
+.staffWrapper {
+  padding: 10px;
+}
+// Title reviev
+.staffTitle {
+  font-size: $fs-title2;
+  margin-bottom: 60px;
+  text-align: center;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 40px;
+    font-size: 34px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 23px;
+    font-size: 24px;
+  }
+}
+// Image
+.image {
+  transform: translate(-50%, 0);
+  margin-bottom: 30px;
+  position: relative;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 690px;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+    max-width: 430px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+    max-width: 285px;
+  }
+}
+// Text
+.text {
+  transform: translate(-50%, 0);
+  margin-bottom: 30px;
+  position: relative;
+  width: 850px;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 620px;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+    max-width: 390px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 15px;
+    max-width: 250px;
+  }
+}
+
+//*Specialists
+.specialists {
+  flex-direction: column;
+  display: flex;
+}
+.specialistsTitle {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 22px;
+  // Media
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+.specialistsContent {
+  justify-content: space-between;
+  transform: translate(-50%, 0);
+  margin-bottom: 50px;
+  position: relative;
+  max-width: 500px;
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 40px;
+    max-width: 480px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    max-width: 360px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 15px;
+    max-width: 260px;
+  }
+}

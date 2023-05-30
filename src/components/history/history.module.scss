@@ -1,0 +1,134 @@
+//*History
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*History section
+.history {
+  background-color: $c-bg-spec;
+  line-height: 15px;
+  // Media
+  @media screen and (max-width: 480px) {
+    line-height: 12px;
+    font-size: 8px;
+  }
+  a {
+    font-size: $fs-base;
+    color: $c-orange;
+    // Media
+    @media screen and (max-width: 480px) {
+      line-height: 12px;
+      font-size: 8px;
+    }
+  }
+}
+.wrapper {
+  padding: 10px;
+}
+
+//*Text block
+.text {
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 80px;
+  padding: 5px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-top: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: 20px;
+  }
+}
+.textTitle,
+.specialistTitle {
+  font-size: $fs-title3;
+  margin-bottom: 24px;
+  line-height: 20px;
+  color: $c-black;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 20px;
+    line-height: 18px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 15px;
+    line-height: 16px;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+    line-height: 14px;
+    font-size: 14px;
+  }
+}
+.textTitle,
+.specialistTitle {
+  text-align: center;
+}
+.textContent {
+  transform: translate(-50%, 0);
+  margin-bottom: 20px;
+  position: relative;
+  max-width: 250px;
+  width: 100%;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+  }
+}
+.textLink,
+.specialisLink {
+  transform: translate(-50%, 0);
+  width: fit-content;
+  position: relative;
+  left: 50%;
+}
+.textLink {
+  margin-bottom: 50px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 40px;
+  }
+}
+.textLink:hover {
+  background-color: $c-brown-light;
+}
+.specialisLink {
+  margin-top: 20px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-top: 15px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: 10px;
+  }
+}
+.specialisLink:hover {
+  background-color: $c-brown-light;
+}
+
+//*Specialist block
+.specialist {
+  margin-bottom: 80px;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 5px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
+}

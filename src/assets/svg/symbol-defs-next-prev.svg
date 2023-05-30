@@ -1,0 +1,10 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-next" viewBox="0 0 20 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M18.604 16c0-0.529-0.207-1.057-0.619-1.46l-12.981-12.684c-0.826-0.807-2.164-0.807-2.99 0s-0.825 2.114 0 2.921l11.486 11.223-11.486 11.223c-0.825 0.807-0.825 2.115 0 2.921s2.164 0.807 2.99 0l12.981-12.684c0.412-0.403 0.619-0.932 0.619-1.46z"></path>
+</symbol>
+<symbol id="icon-prev" viewBox="0 0 19 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M1.219 16c0-0.511 0.2-1.022 0.598-1.411l12.541-12.254c0.798-0.779 2.091-0.779 2.888 0s0.797 2.043 0 2.822l-11.096 10.843 11.096 10.843c0.797 0.779 0.797 2.043 0 2.822s-2.091 0.78-2.888 0l-12.541-12.254c-0.398-0.39-0.598-0.9-0.598-1.411z"></path>
+</symbol>
+</defs>
+</svg>

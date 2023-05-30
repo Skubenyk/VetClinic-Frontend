@@ -1,0 +1,181 @@
+//*Appointment
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*Appointment section
+.appointment {
+  background-color: $c-white;
+  position: relative;
+  color: $c-black;
+}
+.wrapper {
+  padding: 10 10 10 0px;
+}
+
+//*Text image block
+.textImage {
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  padding: 5px;
+  // Media
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+//*Text icon block
+.textIcon {
+  flex-direction: column;
+  margin-right: 10px;
+  margin-left: 10px;
+  max-width: 350px;
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 290px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 240px;
+  }
+}
+.text {
+  margin-bottom: 100px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 65px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 50px;
+  }
+}
+.textTitle {
+  font-size: $fs-title2;
+  margin-bottom: 25px;
+  line-height: 50px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 20px;
+    line-height: 30px;
+    font-size: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 25px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+    line-height: 18px;
+    font-size: 20px;
+  }
+}
+.buttonOpen {
+  background-color: $c-orange;
+  padding-right: 35px;
+  border-radius: 17px;
+  width: fit-content;
+  text-align: center;
+  padding-left: 35px;
+  font-weight: 800;
+  color: $c-white;
+  border: none;
+  height: 35px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    padding-right: 20px;
+    border-radius: 14px;
+    padding-left: 20px;
+    font-size: 8px;
+    height: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-right: 12px;
+    border-radius: 10px;
+    padding-left: 12px;
+    display: block;
+    margin: 0 auto;
+    height: 25px;
+  }
+  @media screen and (max-width: 480px) {
+    padding-right: 10px;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 6px;
+    height: 20px;
+  }
+}
+.buttonOpen:hover {
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: $c-brown;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+//*Icon
+.appointmentIcon {
+  // Media
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
+}
+.icon {
+  font-size: $fs-title3;
+  color: $c-icon;
+  // Media
+  @media screen and (max-width: 1024px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+// Hover effect
+.icon:hover {
+  transform: scale(1.15);
+  transition: 1.2s;
+  color:$c-brown;
+}
+.iconInstagram,
+.iconFacebook,
+.iconVk,
+.iconYoutube {
+  margin-right: 25px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-right: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-right: 15px;
+  }
+}
+//*Image
+.image {
+  margin-left: 10px;
+  // Media
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.imageContent {
+  max-width: 415px;
+  width: 100%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 300px;
+  }
+}

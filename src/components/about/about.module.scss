@@ -1,0 +1,185 @@
+//*About
+
+@import './../../styles/normolize.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+@import './../../styles/fonts.scss';
+
+//*Application section
+.about {
+  background-color: $c-white;
+  line-height: 25px;
+  color: $c-black;
+  font-size: 12px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    line-height: 23px;
+  }
+  @media screen and (max-width: 768px) {
+    line-height: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    line-height: 16px;
+    font-size: 8px;
+  }
+}
+.wrapper {
+  flex-direction: column;
+  display: flex;
+  padding: 10px;
+}
+// Link beck
+.linkBeck {
+  transform: translate(-9%, 0);
+  font-size: $fs-base;
+  margin-bottom: 40px;
+  position: relative;
+  width: fit-content;
+  color: $c-orange;
+  font-weight: 800;
+  position: fixed;
+  z-index: 5;
+  top: 90px;
+  left: 9%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    transform: translate(-8%, 0);
+    left: 8%;
+  }
+  @media screen and (max-width: 768px) {
+    transform: translate(-4%, 0);
+    top: 80px;
+    left: 4%;
+  }
+}
+.linkBeck:hover {
+  background-color: $c-brown-light;
+}
+// Title history
+.titleAbout {
+  font-size: $fs-title2;
+  margin-bottom: 45px;
+  text-align: center;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 18px;
+  }
+}
+// Image about
+.imageAbout {
+  transform: translate(-50%, 0);
+  margin-bottom: 30px;
+  position: relative;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 500px;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+    max-width: 300px;
+  }
+}
+// General style
+.title1Text,
+.title3Text {
+  transform: translate(-50%, 0);
+  margin-bottom: 35px;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 15px;
+  }
+}
+.title1,
+.title2,
+.title3 {
+  font-size: $fs-title3;
+  margin-bottom: 20px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+}
+
+//*Title2-text
+.title2Text {
+  margin-bottom: 35px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 15px;
+  }
+}
+.title2Text2 {
+  transform: translate(-50%, 0);
+  margin-bottom: 25px;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  left: 50%;
+}
+// General style
+.title1Text,
+.title2Text2,
+.title3Text {
+  // Media
+  @media screen and (max-width: 768px) {
+    max-width: 380px;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 270px;
+  }
+}
+// Title2-image
+.title2Image {
+  justify-content: space-evenly;
+  display: flex;
+}
+.imageTitle2Cat,
+.imageTitle2Dog {
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 190px;
+    width: 100%;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 140px;
+  }
+}

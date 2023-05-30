@@ -1,0 +1,243 @@
+//*Reviev
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*Reviev section
+.reviev {
+  background-color: $c-white;
+  color: $c-black;
+}
+// Link beck
+.linkBeck {
+  transform: translate(-9%, 0);
+  font-size: $fs-base;
+  margin-bottom: 40px;
+  position: relative;
+  width: fit-content;
+  color: $c-orange;
+  font-weight: 800;
+  position: fixed;
+  z-index: 5;
+  top: 90px;
+  left: 9%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    transform: translate(-8%, 0);
+    left: 8%;
+  }
+  @media screen and (max-width: 768px) {
+    transform: translate(-4%, 0);
+    top: 80px;
+    left: 4%;
+  }
+}
+.linkBeck:hover {
+  background-color: $c-brown-light;
+}
+// Title reviev
+.titleReviev {
+  font-size: $fs-title2;
+  margin-bottom: 50px;
+  text-align: center;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 40px;
+    font-size: 34px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 23px;
+    font-size: 22px;
+  }
+}
+
+//*Form
+.form {
+  box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+  transform: translate(-50%, 0);
+  background-color: $c-orange;
+  flex-direction: column;
+  margin-bottom: 70px;
+  align-items: center;
+  border-radius: 10px;
+  width: fit-content;
+  position: relative;
+  display: flex;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 35px;
+  }
+  input,
+  textarea {
+    box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+    border: 2px solid $c-white;
+    border-radius: 10px;
+    padding: 7px;
+    // Media
+    @media screen and (max-width: 1024px) {
+      border-radius: 8px;
+      padding: 6px;
+    }
+    @media screen and (max-width: 768px) {
+      border-radius: 6px;
+      padding: 5px;
+    }
+  }
+}
+.formContentText {
+  margin-top: 12px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-top: 10px;
+  }
+}
+.formWrapper {
+  height: fit-content;
+  width: 380px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    width: 360px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 260px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 220px;
+  }
+}
+//*Title
+.titleForm {
+  margin-bottom: 30px;
+  line-height: 10px;
+  font-size: 30px;
+  color: $c-brown;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 20px;
+    line-height: 10px;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 15px;
+  }
+}
+.conntainerForm {
+  flex-direction: column;
+  display: flex;
+  padding: 20px;
+  // Media
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 13px;
+  }
+}
+.formContent {
+  flex-direction: column;
+  display: flex;
+}
+.formContentText {
+  overflow: auto;
+  // Media
+  @media screen and (max-width: 768px) {
+    height: 70px;
+  }
+}
+.formButton {
+  flex-direction: column;
+  display: flex;
+}
+.buttonSubmit {
+  transform: translate(-50%, 0);
+  border-radius: 4px;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  color: $c-white;
+  padding: 0 7px;
+  border: none;
+  height: 26px;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    padding: 6px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 5px;
+    height: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 4px;
+    height: 17px;
+  }
+}
+.buttonSubmit {
+  background-color: $c-brown-light;
+  font-weight: 700;
+  margin-top: 12px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-top: 10px;
+  }
+}
+
+//*Reviev wrapper
+.revievWrapper {
+  transform: translate(-50%, 0);
+  border: 5px solid $c-orange;
+  word-wrap: break-word;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 600px;
+  padding: 10px;
+  width: 100%;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 550px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 25px;
+    max-width: 420px;
+    padding: 8px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+    font-size: $f-base;
+    max-width: 290px;
+    padding: 5px;
+  }
+}
+.revievTitle {
+  font-size: $fs-title3;
+  margin-bottom: 8px;
+  color: $c-brown;
+  // Media
+  @media screen and (max-width: 1024px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+.revievText {
+  font-size: 12px;
+}

@@ -1,0 +1,155 @@
+//*Services
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*Services section
+.services {
+  background-color: $c-white;
+  .a {
+    background-color: $c-white;
+    color: $c-brown;
+  }
+}
+.wrapper {
+  padding: 10px;
+}
+
+//*Card block
+.card {
+  justify-content: space-between;
+  transform: translate(-50%, 0);
+  margin-bottom: 50px;
+  margin-right: 10px;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 50px;
+  max-width: 680px;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+.cardTherapy,
+.cardSurgery,
+.cardNeurology,
+.cardOrthopedics,
+.cardDermatology,
+.cardOphthalmology,
+.cardCardiology,
+.cardDentistry,
+.cardReproductology,
+.cardDiagnostics,
+.cardLaboratory,
+.cardOncology,
+.cardEndocrinology,
+.cardExotic,
+.cardPharmacy,
+.cardGrooming {
+  box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 160px;
+  padding: 10px;
+  width: 100%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-right: 10px;
+    border-radius: 8px;
+    max-width: 145px;
+    padding: 8px;
+  }
+  @media screen and (max-width: 768px) {
+    border-radius: 6px;
+    max-width: 120px;
+    padding: 6px;
+  }
+  @media screen and (max-width: 480px) {
+    border-radius: 4px;
+    max-width: 100px;
+    padding: 4px;
+  }
+}
+.title {
+  margin-bottom: 5px;
+}
+.contentText {
+  @media screen and (max-width: 480px) {
+    font-size: 8px;
+  }
+}
+.contentTherapy,
+.contentSurgery,
+.contentNeurology,
+.contentOrthopedics,
+.contentDermatology,
+.contentOphthalmology,
+.contentCardiology,
+.contentDentistry,
+.contentReproductology,
+.contentDiagnostics,
+.contentLaboratory,
+.contentOncology,
+.contentEndocrinology,
+.contentExotic,
+.contentPharmacy,
+.contentGrooming {
+  justify-content: space-between;
+  display: flex;
+}
+.contentText {
+  align-self: end;
+}
+.contentTherapyIcon,
+.contentSurgeryIcon,
+.contentNeurologyIcon,
+.contentOrthopedicsIcon,
+.contentDermatologyIcon,
+.contentOphthalmologyIcon,
+.contentCardiologyIcon,
+.contentDentistryIcon,
+.contentLaboratoryIcon,
+.contentOncologyIcon,
+.contentPharmacyIcon,
+.contentReproductologyIcon,
+.contentEndocrinologyIcon,
+.contentGroomingIcon {
+  @media screen and (max-width: 768px) {
+    padding-bottom: 15px;
+  }
+}
+.icon {
+  color: $c-orange;
+  font-size: 50px;
+  // Media
+  @media screen and (max-width: 768px) {
+    font-size: 45px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 40px;
+  }
+}
+// Hover effect
+.a:hover {
+  .icon {
+    transition: 1.2s;
+    color: $c-brown;
+  }
+}

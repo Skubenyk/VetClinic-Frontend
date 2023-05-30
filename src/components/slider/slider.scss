@@ -1,0 +1,35 @@
+//*Slider styles
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*Swiper standard button styles
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+//*My styles for buttons Swiper
+.prev,
+.next {
+  background: transparent;
+  border: none;
+}
+
+//*Icon next & prev
+.icon {
+  color: $c-orange;
+  font-size: 18px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+}

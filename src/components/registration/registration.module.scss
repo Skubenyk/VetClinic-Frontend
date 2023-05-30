@@ -1,0 +1,150 @@
+//*Registration
+
+@import './../../styles/normolize.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/main.scss';
+
+//*Registration section
+
+// Not visible modal window
+.modal {
+  background-color: rgba(204, 204, 190, 0.5);
+  pointer-events: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+// Visible modal window
+.modal.active {
+  pointer-events: all;
+  opacity: 1;
+}
+.form {
+  box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+  transform: translate(-50%, -50%);
+  background-color: $c-orange;
+  flex-direction: column;
+  border-radius: 10px;
+  height: fit-content;
+  position: absolute;
+  padding: 20px;
+  display: flex;
+  width: 320px;
+  left: 50%;
+  top: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    width: 290px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 18px;
+    width: 250px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 15px;
+    width: 220px;
+  }
+}
+//*Title form
+.title {
+  margin-bottom: 20px;
+  line-height: 10px;
+  font-size: 24px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 18px;
+    line-height: 10px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+}
+.wrapper {
+  flex-direction: column;
+  display: flex;
+}
+.input {
+  box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+  border: 2px solid $c-white;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 7px;
+  width: 100%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    border-radius: 8px;
+    margin-top: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    border-radius: 6px;
+    margin-top: 16px;
+  }
+  @media screen and (max-width: 480px) {
+    border-radius: 4px;
+    margin-top: 12px;
+    padding: 5px;
+  }
+}
+.firstName {
+  margin-top: 0;
+}
+
+//*Buttons
+.buttonSubmit,
+.buttonClose {
+  transform: translate(-50%, 0);
+  flex-direction: column;
+  border-radius: 4px;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  color: $c-white;
+  padding: 7px;
+  display: flex;
+  border: none;
+  height: 26px;
+  left: 50%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    padding: 6px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 5px;
+    height: 22px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 4px;
+    height: 20px;
+  }
+}
+.buttonSubmit {
+  background-color: $c-brown-light;
+  font-weight: 700;
+  margin-top: 20px;
+  // Media
+  @media screen and (max-width: 1024px) {
+    margin-top: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 16px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: 12px;
+  }
+}
+.buttonClose {
+  background-color: $c-orange;
+  color: $c-black;
+  font-size: 8px;
+}
+.error {
+  color: $c-red;
+  margin-left: 10px;
+}

@@ -1,0 +1,37 @@
+//*Global
+
+* {
+  // border: 1px solid red;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $c-white;
+  font-family: $f-base;
+  font-size: $fs-base;
+  position: relative;
+  padding-top: 120px;
+  line-height: 15px;
+  color: $c-brown;
+}
+.icon {
+  display: inline-block;
+  stroke: currentColor;
+  fill: currentColor;
+  stroke-width: 0;
+  height: 1em;
+  width: 1em;
+}
+a {
+  text-decoration: none;
+}
+input:focus {
+  background-color: $c-bg-spec;
+}
+textarea:focus {
+  background-color: $c-bg-spec;
+}

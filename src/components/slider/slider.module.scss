@@ -1,0 +1,29 @@
+//*Slider module styles
+
+@import './../../styles/normolize.scss';
+@import './../../styles/variables.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/main.scss';
+
+//*Swiper
+.imageSlider {
+  position: relative;
+  overflow: hidden;
+}
+.imageSliderImage {
+  text-align: center;
+}
+.imageSliderImage img {
+  max-width: 90px;
+  width: 100%;
+  // Media
+  @media screen and (max-width: 1024px) {
+    max-width: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 70px;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 60px;
+  }
+}
