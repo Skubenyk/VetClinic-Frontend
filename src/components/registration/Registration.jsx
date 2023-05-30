@@ -10,7 +10,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const Registration = ({ active, setActive }) => {
-  const URL = 'http://localhost:8080/api/users/registration';
+  const URL = 'https://vetclinic-backend.onrender.com/api/users/registration';
   //*Formik
   const formik = useFormik({
     initialValues: {

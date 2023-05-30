@@ -11,7 +11,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const Authorization = ({ active, setActive }) => {
-  const URL = 'http://localhost:8080/api/users/authorization';
+  const URL = 'https://vetclinic-backend.onrender.com/api/users/authorization';
   //*Formik
   const formik = useFormik({
     initialValues: {
