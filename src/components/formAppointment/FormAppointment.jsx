@@ -44,12 +44,16 @@ const FormAppointment = ({ active, setActive }) => {
     try {
       const response = await axios.post(URL, formData, {
         headers: {
-          'Content-Type': 'application/json',
+          Appointment: 'form appointment',
         },
       });
       console.log(response.data);
+      // Показать сообщение про успешную запись на прийом
+      alert('Успешная запись на прийом!');
     } catch (error) {
       console.error('Error:', error);
+      // Показать сообщение про неудачную запись на прийом
+      alert('Неудачная запись на прийом!');
     }
   };
 

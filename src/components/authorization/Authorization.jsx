@@ -44,8 +44,12 @@ const Authorization = ({ active, setActive }) => {
         headers: { Authorization: 'form authorization' },
       });
       console.log(response.data);
+      // Показать сообщение про успешную авторизацию
+      alert('Успешная авторизацияция!');
     } catch (error) {
       console.error('Error:', error);
+      // Показать сообщение про неудачную авторизацию
+      alert('Неудачная авторизация!');
     }
   };
 

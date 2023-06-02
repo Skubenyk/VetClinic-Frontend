@@ -22,20 +22,20 @@ const Registration = ({ active, setActive }) => {
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
-        .min(2, 'Мінімум 2 символи')
-        .required("Обов'язкове поле!"),
+        .min(2, 'Минимум 2 символа')
+        .required('Обязательное поле!'),
       lastName: Yup.string()
-        .min(2, 'Мінімум 2 символи')
-        .required("Обов'язкове поле!"),
+        .min(2, 'Минимум 2 символа')
+        .required('Обязательное поле!'),
       userName: Yup.string()
-        .min(4, 'Мінімум 4 символи')
-        .required("Обов'язкове поле!"),
+        .min(4, 'Минимум 4 символа')
+        .required('Обязательное поле!'),
       email: Yup.string()
-        .email('Неправильний адрес електронної пошти')
-        .required("Обов'язкове поле!"),
+        .email('Неправильный email адрес')
+        .required('Обязательное поле!'),
       password: Yup.string()
-        .min(6, 'Мінімум 6 символів')
-        .required("Обов'язкове поле!"),
+        .min(6, 'Минимум 6 символов')
+        .required('Обязательное поле!'),
     }),
     onSubmit: (values, { setSubmitting, resetForm }) => {
       console.log(JSON.stringify(values, null, 2));
@@ -49,10 +49,16 @@ const Registration = ({ active, setActive }) => {
 
   const sendData = async (formData) => {
     try {
-      const response = await axios.post(URL, formData);
+      const response = await axios.post(URL, formData, {
+        headers: { Registration: 'form registration' },
+      });
       console.log(response.data);
+      // Показать сообщение про успешную регистрацию
+      alert('Успешная регистрация!');
     } catch (error) {
-      console.error('Помилка:', error);
+      console.error('Error:', error);
+      // Показать сообщение про неудачную регистрацию
+      alert('Неудачная регистрация!');
     }
   };
 
@@ -68,13 +74,13 @@ const Registration = ({ active, setActive }) => {
         method='post'
         onSubmit={formik.handleSubmit}
       >
-        <h2 className={styles.title}>РЕЄСТРАЦІЯ</h2>
+        <h2 className={styles.title}>РЕГИСТРАЦИЯ</h2>
         <div className={styles.wrapper}>
           <label className={styles.label} htmlFor='firstName'></label>
           <input
             className={classNames(styles.input, styles.firstName)}
             name='firstName'
-            placeholder="Ім'я"
+            placeholder='Имя'
             type='text'
             value={formik.values.firstName}
             onChange={formik.handleChange}
@@ -88,7 +94,7 @@ const Registration = ({ active, setActive }) => {
           <input
             className={classNames(styles.input, styles.lastName)}
             name='lastName'
-            placeholder='Прізвище'
+            placeholder='Фамилия'
             type='text'
             value={formik.values.lastName}
             onChange={formik.handleChange}
@@ -102,7 +108,7 @@ const Registration = ({ active, setActive }) => {
           <input
             className={classNames(styles.input, styles.userName)}
             name='userName'
-            placeholder="Ім'я користувача"
+            placeholder='Имя пользователя'
             type='text'
             value={formik.values.userName}
             onChange={formik.handleChange}
@@ -116,7 +122,7 @@ const Registration = ({ active, setActive }) => {
           <input
             className={classNames(styles.input, styles.email)}
             name='email'
-            placeholder='Електронна пошта'
+            placeholder='Электронная почта'
             type='email'
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -146,7 +152,7 @@ const Registration = ({ active, setActive }) => {
               type='submit'
               onClick={(e) => e.stopPropagation()}
             >
-              <span>Реєстрація</span>
+              <span>РЕГИСТРАЦИЯ</span>
             </button>
             <button className={styles.buttonClose} type='button'>
               <span>ЗАКРЫТЬ</span>
