@@ -1,21 +1,21 @@
 //*Header
 
 //*Import base
-import styles from './header.module.scss';
-import { Link } from 'react-router-dom';
-import React, { Suspense } from 'react';
-import classNames from 'classnames';
-import { useState } from 'react';
+import styles from "./header.module.scss";
+import { Link } from "react-router-dom";
+import React, { Suspense } from "react";
+import classNames from "classnames";
+import { useState } from "react";
 
 //*Import image
-import logo from './../../assets/image/logo.png';
+import logo from "./../../assets/image/logo.png";
 
 //*Import components lazy
 const Authorization = React.lazy(() =>
-  import('./../authorization/Authorization')
+  import("./../authorization/Authorization")
 );
-const Registration = React.lazy(() => import('./../registration/Registration'));
-const Burger = React.lazy(() => import('./../burger/Burger'));
+const Registration = React.lazy(() => import("./../registration/Registration"));
+const Burger = React.lazy(() => import("./../burger/Burger"));
 
 const Header = () => {
   //*Hook useState for active
@@ -30,7 +30,7 @@ const Header = () => {
           {/* Logo */}
           <div className={styles.headerLogo}>
             <Link className={styles.logo} to='/'>
-              <img className={styles.logoImage} src={logo} alt={'logo'} />
+              <img className={styles.logoImage} src={logo} alt={"logo"} />
             </Link>
           </div>
           <div className={styles.headerBlock}>
@@ -60,7 +60,7 @@ const Header = () => {
                   <li className={styles.navigationItem}>
                     <a
                       className={styles.navigationLink}
-                      href='https://www.linkedin.com/in/yevhenii-skubenyk-a8969a125'
+                      href='https://www.linkedin.com/in/yevhenii-skubenyk-%F0%9F%87%BA%F0%9F%87%A6-a8969a125/'
                     >
                       ЛИЧНЫЙ КАБИНЕТ
                     </a>

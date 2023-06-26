@@ -83,7 +83,7 @@ const Footer = () => {
           <div className={styles.apps}>
             <div className={styles.appsMobile}>
               {/* App store */}
-              <a href='#'>
+              <a href='https://www.linkedin.com/in/yevhenii-skubenyk-%F0%9F%87%BA%F0%9F%87%A6-a8969a125/'>
                 <img
                   className={styles.appStore}
                   src={appStore}
@@ -91,7 +91,7 @@ const Footer = () => {
                 />
               </a>
               {/* Google play */}
-              <a href='#'>
+              <a href='https://drive.google.com/file/d/1qErtv6BIo6BDVGpSuNN_JIvtt0LoNTHe/view'>
                 <img
                   className={styles.googlePlay}
                   src={googlePlay}
@@ -104,14 +104,17 @@ const Footer = () => {
               {/* Icon instagram */}
               <a
                 className={styles.iconInstagram}
-                href='https://www.linkedin.com/in/yevhenii-skubenyk-a8969a125'
+                href='https://github.com/Skubenyk'
               >
                 <svg className={styles.icon}>
                   <use xlinkHref='#icon-instagram'></use>
                 </svg>
               </a>
               {/* Icon facebook */}
-              <a className={styles.iconFacebook} href='https://t.me/Skubenik_E'>
+              <a
+                className={styles.iconFacebook}
+                href='https://heartfelt-paletas-b9d248.netlify.app/'
+              >
                 <svg className={styles.icon}>
                   <use xlinkHref='#icon-facebook'></use>
                 </svg>
@@ -119,14 +122,17 @@ const Footer = () => {
               {/* Icon vk */}
               <a
                 className={styles.iconVk}
-                href='https://www.linkedin.com/in/yevhenii-skubenyk-a8969a125'
+                href='https://restaurant.alexcode.space/'
               >
                 <svg className={styles.icon}>
                   <use xlinkHref='#icon-vk'></use>
                 </svg>
               </a>
               {/* Icon youtube */}
-              <a className={styles.iconYoutube} href='https://t.me/Skubenik_E/'>
+              <a
+                className={styles.iconYoutube}
+                href='https://drive.google.com/file/d/1qErtv6BIo6BDVGpSuNN_JIvtt0LoNTHe/view'
+              >
                 <svg className={styles.icon}>
                   <use xlinkHref='#icon-youtube'></use>
                 </svg>
@@ -134,7 +140,7 @@ const Footer = () => {
             </div>
             {/* Apps mail */}
             <div className={styles.appsMail}>
-              <a href='mailto:skubenik@gmail.com'>aibolit@gmail.com</a>
+              <a href='mailto:skubenik@gmail.com'>skubenik@gmail.com</a>
             </div>
           </div>
         </div>
