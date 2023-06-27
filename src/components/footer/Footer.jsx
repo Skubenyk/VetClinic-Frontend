@@ -91,7 +91,7 @@ const Footer = () => {
                 />
               </a>
               {/* Google play */}
-              <a href='https://drive.google.com/file/d/1qErtv6BIo6BDVGpSuNN_JIvtt0LoNTHe/view'>
+              <a href='https://drive.google.com/file/d/1qvn2lIthtjcQVgSJfK2l3qUhFzaoldja/view?usp=sharing'>
                 <img
                   className={styles.googlePlay}
                   src={googlePlay}
@@ -131,7 +131,7 @@ const Footer = () => {
               {/* Icon youtube */}
               <a
                 className={styles.iconYoutube}
-                href='https://drive.google.com/file/d/1qErtv6BIo6BDVGpSuNN_JIvtt0LoNTHe/view'
+                href='https://drive.google.com/file/d/1qvn2lIthtjcQVgSJfK2l3qUhFzaoldja/view?usp=sharing'
               >
                 <svg className={styles.icon}>
                   <use xlinkHref='#icon-youtube'></use>
