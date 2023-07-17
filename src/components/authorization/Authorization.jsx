@@ -44,7 +44,7 @@ const Authorization = ({ active, setActive }) => {
       });
       console.log(response.data);
       // Показать сообщение про успешную авторизацию
-      alert('Успешная авторизацияция!');
+      alert('Успешная авторизация!');
     } catch (error) {
       console.error('Error:', error);
       // Показать сообщение про неудачную авторизацию
