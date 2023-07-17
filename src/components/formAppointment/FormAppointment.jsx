@@ -32,11 +32,10 @@ const FormAppointment = ({ active, setActive }) => {
     }),
     onSubmit: (values, { setSubmitting, resetForm }) => {
       console.log(JSON.stringify(values, null, 2));
-      setTimeout(() => {
-        setSubmitting(false);
-        resetForm();
-      }, 400);
+      setSubmitting(false);
+      resetForm();
       sendData(values);
+      setActive(false);
     },
   });
 
@@ -64,7 +63,7 @@ const FormAppointment = ({ active, setActive }) => {
       }
       onClick={() => setActive(false)}
     >
-      <div className={styles.form}>
+      <div className={styles.form} onClick={(e) => e.stopPropagation()}>
         <div className={styles.formWrapper}>
           <form action='#' method='post' onSubmit={formik.handleSubmit}>
             <div className={styles.conntainerForm}>
@@ -79,7 +78,6 @@ const FormAppointment = ({ active, setActive }) => {
                   value={formik.values.name}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  onClick={(e) => e.stopPropagation()}
                 />
                 {formik.errors.name && formik.touched.name ? (
                   <div className={styles.error}>{formik.errors.name}</div>
@@ -93,7 +91,6 @@ const FormAppointment = ({ active, setActive }) => {
                   value={formik.values.tel}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  onClick={(e) => e.stopPropagation()}
                 />
                 {formik.errors.tel && formik.touched.tel ? (
                   <div className={styles.error}>{formik.errors.tel}</div>
@@ -107,22 +104,14 @@ const FormAppointment = ({ active, setActive }) => {
                   value={formik.values.text}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  onClick={(e) => e.stopPropagation()}
                 />
                 {formik.errors.text && formik.touched.text ? (
                   <div className={styles.error}>{formik.errors.text}</div>
                 ) : null}
               </div>
               <div className={styles.formButton}>
-                <button
-                  className={styles.buttonSubmit}
-                  type='submit'
-                  onClick={(e) => e.stopPropagation()}
-                >
+                <button className={styles.buttonSubmit} type='submit'>
                   <span>ОТПРАВИТЬ</span>
-                </button>
-                <button className={styles.buttonClose} type='button'>
-                  <span>ЗАКРЫТЬ</span>
                 </button>
               </div>
             </div>

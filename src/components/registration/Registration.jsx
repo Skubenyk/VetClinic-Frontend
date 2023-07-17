@@ -39,11 +39,10 @@ const Registration = ({ active, setActive }) => {
     }),
     onSubmit: (values, { setSubmitting, resetForm }) => {
       console.log(JSON.stringify(values, null, 2));
-      setTimeout(() => {
-        setSubmitting(false);
-        resetForm();
-      }, 400);
+      setSubmitting(false);
+      resetForm();
       sendData(values);
+      setActive(false);
     },
   });
 
@@ -69,97 +68,87 @@ const Registration = ({ active, setActive }) => {
       }
       onClick={() => setActive(false)}
     >
-      <form
-        className={styles.form}
-        method='post'
-        onSubmit={formik.handleSubmit}
-      >
-        <h2 className={styles.title}>РЕГИСТРАЦИЯ</h2>
-        <div className={styles.wrapper}>
-          <label className={styles.label} htmlFor='firstName'></label>
-          <input
-            className={classNames(styles.input, styles.firstName)}
-            name='firstName'
-            placeholder='Имя'
-            type='text'
-            value={formik.values.firstName}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            onClick={(e) => e.stopPropagation()}
-          />
-          {formik.errors.firstName && formik.touched.firstName ? (
-            <div className={styles.error}>{formik.errors.firstName}</div>
-          ) : null}
-          <label className={styles.label} htmlFor='lastName'></label>
-          <input
-            className={classNames(styles.input, styles.lastName)}
-            name='lastName'
-            placeholder='Фамилия'
-            type='text'
-            value={formik.values.lastName}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            onClick={(e) => e.stopPropagation()}
-          />
-          {formik.errors.lastName && formik.touched.lastName ? (
-            <div className={styles.error}>{formik.errors.lastName}</div>
-          ) : null}
-          <label className={styles.label} htmlFor='userName'></label>
-          <input
-            className={classNames(styles.input, styles.userName)}
-            name='userName'
-            placeholder='Имя пользователя'
-            type='text'
-            value={formik.values.userName}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            onClick={(e) => e.stopPropagation()}
-          />
-          {formik.errors.userName && formik.touched.userName ? (
-            <div className={styles.error}>{formik.errors.userName}</div>
-          ) : null}
-          <label className={styles.label} htmlFor='email'></label>
-          <input
-            className={classNames(styles.input, styles.email)}
-            name='email'
-            placeholder='Электронная почта'
-            type='email'
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            onClick={(e) => e.stopPropagation()}
-          />
-          {formik.errors.email && formik.touched.email ? (
-            <div className={styles.error}>{formik.errors.email}</div>
-          ) : null}
-          <label className={styles.label} htmlFor='password'></label>
-          <input
-            className={classNames(styles.input, styles.password)}
-            name='password'
-            placeholder='Пароль'
-            type='password'
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            onClick={(e) => e.stopPropagation()}
-          />
-          {formik.errors.password && formik.touched.password ? (
-            <div className={styles.error}>{formik.errors.password}</div>
-          ) : null}
-          <div className={styles.button}>
-            <button
-              className={styles.buttonSubmit}
-              type='submit'
-              onClick={(e) => e.stopPropagation()}
-            >
-              <span>РЕГИСТРАЦИЯ</span>
-            </button>
-            <button className={styles.buttonClose} type='button'>
-              <span>ЗАКРЫТЬ</span>
-            </button>
+      <div onClick={(e) => e.stopPropagation()}>
+        <form
+          className={styles.form}
+          method='post'
+          onSubmit={formik.handleSubmit}
+        >
+          <h2 className={styles.title}>РЕГИСТРАЦИЯ</h2>
+          <div className={styles.wrapper}>
+            <label className={styles.label} htmlFor='firstName'></label>
+            <input
+              className={classNames(styles.input, styles.firstName)}
+              name='firstName'
+              placeholder='Имя'
+              type='text'
+              value={formik.values.firstName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.errors.firstName && formik.touched.firstName ? (
+              <div className={styles.error}>{formik.errors.firstName}</div>
+            ) : null}
+            <label className={styles.label} htmlFor='lastName'></label>
+            <input
+              className={classNames(styles.input, styles.lastName)}
+              name='lastName'
+              placeholder='Фамилия'
+              type='text'
+              value={formik.values.lastName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.errors.lastName && formik.touched.lastName ? (
+              <div className={styles.error}>{formik.errors.lastName}</div>
+            ) : null}
+            <label className={styles.label} htmlFor='userName'></label>
+            <input
+              className={classNames(styles.input, styles.userName)}
+              name='userName'
+              placeholder='Имя пользователя'
+              type='text'
+              value={formik.values.userName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.errors.userName && formik.touched.userName ? (
+              <div className={styles.error}>{formik.errors.userName}</div>
+            ) : null}
+            <label className={styles.label} htmlFor='email'></label>
+            <input
+              className={classNames(styles.input, styles.email)}
+              name='email'
+              placeholder='Электронная почта'
+              type='email'
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.errors.email && formik.touched.email ? (
+              <div className={styles.error}>{formik.errors.email}</div>
+            ) : null}
+            <label className={styles.label} htmlFor='password'></label>
+            <input
+              className={classNames(styles.input, styles.password)}
+              name='password'
+              placeholder='Пароль'
+              type='password'
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.errors.password && formik.touched.password ? (
+              <div className={styles.error}>{formik.errors.password}</div>
+            ) : null}
+            <div className={styles.button}>
+              <button className={styles.buttonSubmit} type='submit'>
+                <span>РЕГИСТРАЦИЯ</span>
+              </button>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };

@@ -125,20 +125,23 @@
   flex-direction: column;
   display: flex;
 }
-.buttonSubmit,
-.buttonClose {
+.buttonSubmit {
+  background-color: $c-brown-light;
   transform: translate(-50%, 0);
   border-radius: 4px;
   width: fit-content;
   position: relative;
-  cursor: pointer;
+  font-weight: 700;
+  margin-top: 12px;
   color: $c-white;
+  cursor: pointer;
   padding: 0 7px;
   border: none;
   height: 26px;
   left: 50%;
   // Media
   @media screen and (max-width: 1024px) {
+    margin-top: 10px;
     padding: 6px;
   }
   @media screen and (max-width: 768px) {
@@ -149,20 +152,6 @@
     padding: 4px;
     height: 17px;
   }
-}
-.buttonSubmit {
-  background-color: $c-brown-light;
-  font-weight: 700;
-  margin-top: 12px;
-  // Media
-  @media screen and (max-width: 1024px) {
-    margin-top: 10px;
-  }
-}
-.buttonClose {
-  background-color: $c-orange;
-  color: $c-black;
-  font-size: 8px;
 }
 .error {
   color: $c-red;

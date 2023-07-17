@@ -29,11 +29,10 @@ const Authorization = ({ active, setActive }) => {
     }),
     onSubmit: (values, { setSubmitting, resetForm }) => {
       console.log(JSON.stringify(values, null, 2));
-      setTimeout(() => {
-        setSubmitting(false);
-        resetForm();
-      }, 400);
+      setSubmitting(false);
+      resetForm();
       sendData(values);
+      setActive(false);
     },
   });
 
@@ -61,66 +60,55 @@ const Authorization = ({ active, setActive }) => {
       }
       onClick={() => setActive(false)}
     >
-      {/* Form */}
-      <form
-        className={styles.form}
-        method='post'
-        onSubmit={formik.handleSubmit}
-      >
-        {/* Title form */}
-        <h2 className={styles.title}>АВТОРИЗАЦИЯ</h2>
-        <div className={styles.wrapper}>
-          {/* Email */}
-          <label className={styles.label} htmlFor='email'></label>
-          <input
-            className={classNames(styles.input, styles.email)}
-            name='email'
-            placeholder='Почта'
-            type='email'
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            onClick={(e) => e.stopPropagation()}
-          />
-          {/* Conditions for including a style error */}
-          {formik.errors.email && formik.touched.email ? (
-            <div className={styles.error}>{formik.errors.email}</div>
-          ) : null}
-          {/* Password */}
-          <label className={styles.label} htmlFor='password'></label>
-          <input
-            className={classNames(styles.input, styles.password)}
-            name='password'
-            placeholder='Пароль'
-            type='password'
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            onClick={(e) => e.stopPropagation()}
-          />
-          {/* Conditions for including a style error */}
-          {formik.errors.password && formik.touched.password ? (
-            <div className={styles.error}>{formik.errors.password}</div>
-          ) : null}
-          {/* Buttons */}
-          <div className={styles.button}>
-            <button
-              className={styles.buttonSubmit}
-              type='submit'
-              onClick={(e) => e.stopPropagation()}
-            >
-              <span>ВХОД</span>
-            </button>
-            <button
-              //*Close the modal window
-              className={styles.buttonClose}
-              type='button'
-            >
-              <span>ЗАКРЫТЬ</span>
-            </button>
+      <div onClick={(e) => e.stopPropagation()}>
+        {/* Form */}
+        <form
+          className={styles.form}
+          method='post'
+          onSubmit={formik.handleSubmit}
+        >
+          {/* Title form */}
+          <h2 className={styles.title}>АВТОРИЗАЦИЯ</h2>
+          <div className={styles.wrapper}>
+            {/* Email */}
+            <label className={styles.label} htmlFor='email'></label>
+            <input
+              className={classNames(styles.input, styles.email)}
+              name='email'
+              placeholder='Почта'
+              type='email'
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {/* Conditions for including a style error */}
+            {formik.errors.email && formik.touched.email ? (
+              <div className={styles.error}>{formik.errors.email}</div>
+            ) : null}
+            {/* Password */}
+            <label className={styles.label} htmlFor='password'></label>
+            <input
+              className={classNames(styles.input, styles.password)}
+              name='password'
+              placeholder='Пароль'
+              type='password'
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {/* Conditions for including a style error */}
+            {formik.errors.password && formik.touched.password ? (
+              <div className={styles.error}>{formik.errors.password}</div>
+            ) : null}
+            {/* Buttons */}
+            <div className={styles.button}>
+              <button className={styles.buttonSubmit} type='submit'>
+                <span>ВХОД</span>
+              </button>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };
