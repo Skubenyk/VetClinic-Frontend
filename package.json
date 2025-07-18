@@ -46,6 +46,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": "22.x"
+  },
   "devDependencies": {
     "@types/leaflet": "^1.7.11",
     "webpack": "^5.73.0",
