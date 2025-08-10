@@ -113,26 +113,23 @@ const Footer = () => {
               {/* Icon facebook */}
               <a
                 className={styles.iconFacebook}
-                href='https://heartfelt-paletas-b9d248.netlify.app/'
+                href='https://drive.google.com/file/d/1sTvNHY7JenORCncbY40TSC9zAEtYOJwS/view'
               >
                 <svg className={styles.icon}>
                   <use xlinkHref='#icon-facebook'></use>
                 </svg>
               </a>
-              {/* Icon vk */}
+              {/* Icon Linkedin */}
               <a
-                className={styles.iconVk}
-                href='https://restaurant.alexcode.space/'
+                className={styles.iconLinkedin}
+                href='https://www.linkedin.com/in/yevhenii-skubenyk-%F0%9F%87%BA%F0%9F%87%A6-a8969a125/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BV2Yq86D1TD%2BU2lSeVxY7mg%3D%3D'
               >
                 <svg className={styles.icon}>
-                  <use xlinkHref='#icon-vk'></use>
+                  <use xlinkHref='#icon-linkedin'></use>
                 </svg>
               </a>
               {/* Icon youtube */}
-              <a
-                className={styles.iconYoutube}
-                href='https://drive.google.com/file/d/1qvn2lIthtjcQVgSJfK2l3qUhFzaoldja/view?usp=sharing'
-              >
+              <a className={styles.iconYoutube} href='https://t.me/Skubenik_E'>
                 <svg className={styles.icon}>
                   <use xlinkHref='#icon-youtube'></use>
                 </svg>

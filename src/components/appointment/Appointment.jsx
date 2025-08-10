@@ -1,16 +1,16 @@
 //*Appointment
 
 // *Import base
-import React, { Suspense } from "react";
-import styles from "./appointment.module.scss";
-import { useState } from "react";
+import React, { Suspense } from 'react';
+import styles from './appointment.module.scss';
+import { useState } from 'react';
 
 //*Import image
-import catDog from "./../../assets/image/cat_dog.png";
+import catDog from './../../assets/image/cat_dog.png';
 
 //*Import components lazy
 const FormAppointment = React.lazy(() =>
-  import("./../formAppointment/FormAppointment")
+  import('./../formAppointment/FormAppointment')
 );
 
 const Appointment = () => {
@@ -42,7 +42,7 @@ const Appointment = () => {
               <div className={styles.appointmentIcon}>
                 <a
                   className={styles.iconInstagram}
-                  href='https://www.linkedin.com/in/yevhenii-skubenyk-%F0%9F%87%BA%F0%9F%87%A6-a8969a125/'
+                  href='https://github.com/Skubenyk'
                 >
                   <svg className={styles.icon}>
                     <use xlinkHref='#icon-instagram'></use>
@@ -50,20 +50,23 @@ const Appointment = () => {
                 </a>
                 <a
                   className={styles.iconFacebook}
-                  href='https://t.me/Skubenik_E'
+                  href='https://drive.google.com/file/d/1sTvNHY7JenORCncbY40TSC9zAEtYOJwS/view'
                 >
                   <svg className={styles.icon}>
                     <use xlinkHref='#icon-facebook'></use>
                   </svg>
                 </a>
-                <a className={styles.iconVk} href='https://github.com/Skubenyk'>
+                <a
+                  className={styles.iconLinkedin}
+                  href='https://www.linkedin.com/in/yevhenii-skubenyk-%F0%9F%87%BA%F0%9F%87%A6-a8969a125/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BV2Yq86D1TD%2BU2lSeVxY7mg%3D%3D'
+                >
                   <svg className={styles.icon}>
-                    <use xlinkHref='#icon-vk'></use>
+                    <use xlinkHref='#icon-linkedin'></use>
                   </svg>
                 </a>
                 <a
                   className={styles.iconYoutube}
-                  href='mailto:skubenik@gmail.com'
+                  href='https://t.me/Skubenik_E'
                 >
                   <svg className={styles.icon}>
                     <use xlinkHref='#icon-youtube'></use>
@@ -76,7 +79,7 @@ const Appointment = () => {
               <img
                 className={styles.imageContent}
                 src={catDog}
-                alt={"catDog"}
+                alt={'catDog'}
               />
             </div>
           </div>
